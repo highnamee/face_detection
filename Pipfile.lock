@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ec819fac5b43a78bd7397f4020e36f5364d30efdd668e27ade487a11251ec8ca"
+            "sha256": "1e3afdc144008c4ee1276377060a2d850b114c6a349ff2ca29c7f7be32773128"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -579,17 +579,17 @@
             ],
             "version": "==1.8.0"
         },
-        "tensorflow": {
+        "tensorflow-cpu": {
             "hashes": [
-                "sha256:12f19d6c7161ffef21e69a14e60aaaf47dc25bff133ac954839f1308262b29bf",
-                "sha256:62db938367757c9fb54c56fa2fbbe3cd3bf05c046ee1da81667257fea554dc70",
-                "sha256:7c7572de9f80547dcf3bcc2f94cd7d5dc14395d494c3b9d223e7b3e579a6b24f",
-                "sha256:8f6066b1cbd33e47beb5a35df0f06c60d59d1e0b02ac420789b7679e8d879c70",
-                "sha256:a4539796c4ff8e7a3baaa6337cea237e49ec8f56a9c45f618a9642b474c0c8bd",
-                "sha256:ae17148d608a280c8d82d18404883367015e36cb1f4e02d34395d70a96912432",
-                "sha256:be0a2e3460dacc4214eedd6484b11e50583cb790ed37c6872378100fcaff1090",
-                "sha256:e24b83eecf70d0467adbd5c5507a4f1a448b6df8cc586471d3decce8c50dd25f",
-                "sha256:eb653c85bdd00ca2dba6104b1a04c37eaffccec47e5357a0f57d7b9ee9a678c0"
+                "sha256:0b04a635cc44c911dea029019dbba0292ec62637b2eed48d6b86f474264349d7",
+                "sha256:4c8f7cd7f1a020c1bb048896c8b257ee55c1f59e09421e2d5c6c42f5a536f055",
+                "sha256:5af7f63997db3844c00e69a07b5ac80dceccfeb1bdc2495b455f025d16acde9b",
+                "sha256:7769f890bc356ad4658e7d4f16984d6346053d80e02074519a82c2835ffd3f74",
+                "sha256:86b5226132158fc490ef727521ea5146c3bb4f2f243beae8294ea9b9d9a9a505",
+                "sha256:95d2bacd205a46f020c8d814e6682915e8c496c44804d425352ad16ece892b92",
+                "sha256:a043c8185889c17e6577b26b05c614d2ebfe44c84b5a168a90ab2f1762263cc7",
+                "sha256:b2c9fd99ac5d3d1e1739db3fd2d632fd400151c67980d7e4de14a5946bcc4185",
+                "sha256:b4e2a9c1104f1210b53641937b286d1259b351ba915d9812d8948a664561d4a3"
             ],
             "index": "pypi",
             "version": "==2.7.0"

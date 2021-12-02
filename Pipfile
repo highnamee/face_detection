@@ -14,7 +14,7 @@ opencv-python = "*"
 numpy = "*"
 keras = "*"
 pillow = "*"
-tensorflow = "*"
+tensorflow-cpu = "*"
 
 [dev-packages]
 
