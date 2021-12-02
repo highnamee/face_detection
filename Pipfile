@@ -15,6 +15,7 @@ numpy = "*"
 keras = "*"
 pillow = "*"
 tensorflow-cpu = "*"
+opencv-python-headless = "4.2.0.32"
 
 [dev-packages]
 
