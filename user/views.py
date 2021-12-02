@@ -5,6 +5,7 @@ from django.shortcuts import get_object_or_404
 
 from rest_framework import status, viewsets
 from rest_framework.views import APIView
+from rest_framework.parsers import MultiPartParser
 
 from user.models import User
 from user.serializers import UserSerializer

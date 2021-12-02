@@ -26,5 +26,6 @@ router.register(r'user', user_views.UserViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/auth/', include('user.urls')),
+    path('mask-detect/', include('core.urls')),
     url(r'^', include(router.urls)),
 ]

@@ -10,6 +10,11 @@ djangorestframework = "*"
 djangorestframework-simplejwt = "*"
 gunicorn = "*"
 django-heroku = "*"
+opencv-python = "*"
+numpy = "*"
+keras = "*"
+pillow = "*"
+tensorflow = "*"
 
 [dev-packages]
 
