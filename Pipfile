@@ -13,7 +13,7 @@ django-heroku = "*"
 numpy = "*"
 keras = "*"
 pillow = "*"
-tensorflow-cpu = "*"
+tensorflow = "1.14"
 opencv-python-headless = "*"
 
 [dev-packages]
