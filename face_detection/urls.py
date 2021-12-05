@@ -19,9 +19,11 @@ from django.conf.urls import url
 from rest_framework import routers
 
 from user import views as user_views
+from core import views as core_views
 
 router = routers.DefaultRouter()
 router.register(r'user', user_views.UserViewSet)
+router.register(r'log', core_views.LogViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

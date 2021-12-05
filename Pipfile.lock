@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2856da3eb7732a71754c9e62e38842e12ea1198a67b1d5c9eb83b4b032e50b0d"
+            "sha256": "f84c0e059f54ba9d029c5170940b02fb5896057b1722dac0f8412c2232baa68c"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -23,6 +23,13 @@
             ],
             "markers": "python_version >= '3.6'",
             "version": "==1.0.0"
+        },
+        "adafruit-io": {
+            "hashes": [
+                "sha256:f8e0349fa04b82e46a2a42b7fb005623656526e1194ae99c257f7504460adffd"
+            ],
+            "index": "pypi",
+            "version": "==2.6.0"
         },
         "asgiref": {
             "hashes": [
@@ -56,11 +63,11 @@
         },
         "charset-normalizer": {
             "hashes": [
-                "sha256:735e240d9a8506778cd7a453d97e817e536bb1fc29f4f6961ce297b9c7a917b0",
-                "sha256:83fcdeb225499d6344c8f7f34684c2981270beacc32ede2e669e94f7fa544405"
+                "sha256:1eecaa09422db5be9e29d7fc65664e6c33bd06f9ced7838578ba40d58bdf3721",
+                "sha256:b0b883e8e874edfdece9c28f314e3dd5badf067342e42fb162203335ae61aa2c"
             ],
             "markers": "python_version >= '3'",
-            "version": "==2.0.8"
+            "version": "==2.0.9"
         },
         "dj-database-url": {
             "hashes": [
@@ -355,6 +362,12 @@
             ],
             "markers": "python_version >= '3.5'",
             "version": "==3.3.0"
+        },
+        "paho-mqtt": {
+            "hashes": [
+                "sha256:2a8291c81623aec00372b5a85558a372c747cbca8e9934dfe218638b8eefc26f"
+            ],
+            "version": "==1.6.1"
         },
         "pillow": {
             "hashes": [

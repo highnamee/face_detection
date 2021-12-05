@@ -15,6 +15,7 @@ keras = "*"
 pillow = "*"
 tensorflow-cpu = "*"
 opencv-python-headless = "*"
+adafruit-io = "*"
 
 [dev-packages]
 
