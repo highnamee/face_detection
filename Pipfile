@@ -16,6 +16,7 @@ pillow = "*"
 tensorflow-cpu = "*"
 opencv-python-headless = "*"
 adafruit-io = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 

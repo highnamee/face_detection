@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.conf.urls import url
 from rest_framework import routers
 
 from user import views as user_views
@@ -29,5 +28,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/auth/', include('user.urls')),
     path('mask-detect/', include('core.urls')),
-    url(r'^', include(router.urls)),
+    path(r'', include(router.urls)),
 ]

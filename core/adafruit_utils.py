@@ -1,4 +1,5 @@
 import json
+import os
 from threading import Timer
 from copy import deepcopy
 
@@ -6,7 +7,7 @@ from Adafruit_IO import Client
 
 ADAFRUIT_IO_USERNAME = 'ngocquy25'
 
-ADAFRUIT_IO_KEY = 'aio_enfr065nkIQG1ad97p1LV8mMBUcd'
+ADAFRUIT_IO_KEY = os.getenv("ADAFRUIT_IO_KEY")
 
 TIME_OPEN = 5
 

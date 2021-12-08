@@ -15,16 +15,10 @@ def get_faces(img):
     return haarcascade.detectMultiScale(rerect_size)
 
 
-def mask_detection(img):
+def mask_detection_util(img):
     detected = []
-    img = cv2.imdecode(np.fromstring(
-        img.read(), np.uint8), cv2.IMREAD_UNCHANGED)
-
     faces = get_faces(img)
-
-    if(len(faces) == 0):
-        img = cv2.flip(img, 1, 1)
-        faces = get_faces(img)
+    has_mask = False
 
     for f in faces:
         (x, y, w, h) = [v * rect_size for v in f]
@@ -37,11 +31,30 @@ def mask_detection(img):
         result = model.predict(reshaped)
 
         label = np.argmax(result, axis=1)[0]
+        if label == 1:
+            has_mask = True
 
         detected.append(
             {'label': label, 'x': x, 'y': y, 'w': w, 'h': h})
 
-    return detected
+    return detected, has_mask
+
+
+def mask_detection(img):
+    img = cv2.imdecode(np.fromstring(
+        img.read(), np.uint8), cv2.IMREAD_UNCHANGED)
+
+    detected, has_mask = mask_detection_util(img)
+    detected_flip, has_mask_flip = mask_detection_util(cv2.flip(img, 1, 1))
+
+    if has_mask:
+        return detected
+    if has_mask_flip:
+        return detected_flip
+    if len(detected) > 0:
+        return detected
+
+    return detected_flip
 
 
 def np_encoder(object):
