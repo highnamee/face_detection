@@ -2,6 +2,7 @@
 import cv2
 import numpy as np
 from keras.models import load_model
+from random import random
 
 model = load_model("core/mask-detect-model")
 rect_size = 4
@@ -43,6 +44,9 @@ def mask_detection_util(img):
 def mask_detection(img):
     img = cv2.imdecode(np.fromstring(
         img.read(), np.uint8), cv2.IMREAD_UNCHANGED)
+    img = cv2.cvtColor(img, 1)
+
+    # cv2.imwrite("img/" + str(random()) + '.jpg', img)
 
     detected, has_mask = mask_detection_util(img)
     detected_flip, has_mask_flip = mask_detection_util(cv2.flip(img, 1, 1))
