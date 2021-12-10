@@ -23,7 +23,7 @@ def excute_detect_mask_tasks(masked, un_masked):
 
     # open door when masked detected
     relay_data = 1 if len(masked) > 0 else 0
-    open_door(relay_data)
+    # open_door(relay_data)
 
 
 class DetectMaskView(APIView):
@@ -44,7 +44,7 @@ class DetectMaskView(APIView):
         if len(masked) > 0:
             DetectMaskView.count_masked = (
                 DetectMaskView.count_masked + 1) % 100000
-            if DetectMaskView.count_masked % 10 == 0:
+            if DetectMaskView.count_masked % 5 == 0:
                 task = Thread(target=excute_detect_mask_tasks,
                               args=(masked, un_masked))
                 task.start()
