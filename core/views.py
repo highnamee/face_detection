@@ -29,6 +29,7 @@ def excute_detect_mask_tasks(masked, un_masked):
 class DetectMaskView(APIView):
     queryset = UploadImage.objects.all()
     serializer_class = UploadImageSerializer
+    count_masked = 0
 
     def post(self, request):
         img = request.data['img']
@@ -40,8 +41,12 @@ class DetectMaskView(APIView):
         print(result, masked, un_masked)
 
         # Excute task in other thread
-        task = Thread(target=excute_detect_mask_tasks,
-                      args=(masked, un_masked))
-        task.start()
+        if len(masked) > 0:
+            DetectMaskView.count_masked = (
+                DetectMaskView.count_masked + 1) % 100000
+            if DetectMaskView.count_masked % 10 == 0:
+                task = Thread(target=excute_detect_mask_tasks,
+                              args=(masked, un_masked))
+                task.start()
 
         return JsonResponse({'result': json.dumps(result, default=np_encoder)}, status=200)
